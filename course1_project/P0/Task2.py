@@ -20,3 +20,21 @@ Print a message:
 September 2016.".
 """
 
+def logest_call(calls):
+    # filter year in 2016
+    calls_2016 = []
+    for i in range(len(calls)):
+        if calls[i][2] >= "01-01-2016":
+            calls_2016.append(calls[i])
+
+
+    # find longest call info
+    logest_call = None
+    
+    for i in range(len(calls_2016)):
+        if logest_call is None or calls_2016[i][3] > logest_call[3]:
+            logest_call = calls_2016[i]
+    
+    res = f"{logest_call[0]} spent the longest time, {logest_call[3]} seconds, on the phone during September 2016."
+
+    return res

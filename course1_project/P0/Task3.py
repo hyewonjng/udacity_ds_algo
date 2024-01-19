@@ -112,7 +112,7 @@ def rate_of_both_bangalore(calls):
         search_code_col1 = re.search("^\(080\)", call_number_1)
         search_code_col2 = re.search("^\(080\)", call_number_2)
 
-        if search_code_col1 == True and search_code_col2 == True:
+        if search_code_col1 and search_code_col2:
             both_080 += 1
     
     total_number = number_of_bangalore(calls)

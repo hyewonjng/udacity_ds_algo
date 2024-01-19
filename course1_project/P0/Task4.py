@@ -37,7 +37,7 @@ def receive_text(texts):
     receive_text_list = []
     for i in range(len(texts)):
         if texts[i][1] not in receive_text_list:
-            receive_text_list.append(texts[i][0])
+            receive_text_list.append(texts[i][1])
     
     return receive_text_list
 
@@ -45,7 +45,7 @@ def receive_call(calls):
     receive_call_list = []
     for i in range(len(calls)):
         if calls[i][1] not in receive_call_list:
-            receive_call_list.append(calls[i][0])
+            receive_call_list.append(calls[i][1])
     
     return receive_call_list
 
@@ -57,10 +57,12 @@ def tel_marketing(calls):
     receiving_call_list = receive_call(calls)
 
     for i in range(len(calls)):
-        if calls[i][0] not in sending_txt_list and calls[i][0] not in receiving_txt_list and calls[i][0] not in receiving_call_list:
-            tel_marketing_list.append(calls[i][0])
-
-    tel_marketing_list = tel_marketing_list.sort()
+        if calls[i][0] not in sending_txt_list:
+            if calls[i][0] not in receiving_txt_list:
+                if calls[i][0] not in receiving_call_list:
+                    tel_marketing_list.append(calls[i][0])
+    
+    tel_marketing_list = sorted(list(dict.fromkeys(tel_marketing_list)))
 
     return tel_marketing_list
 
@@ -72,4 +74,4 @@ def listing_telemarketing(tel_marketing_list):
             heading += '\n'
         heading += tel_marketing_list[-1]
     
-    return heading
+    return print(heading)
