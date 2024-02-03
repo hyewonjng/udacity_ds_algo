@@ -1,0 +1,14 @@
+Task0: 
+
+The worst time complexity is O(n+m). The time complexity for this program is also O(n+m) because each function iterates through the lists once. 
+
+Task1:
+The worst time complexity is O(n+m). The time complexity for this program is also O(n+m) because each function iterates through the lists once. 
+
+Task2: the worst time complexity is the part of finding the longest call. Therefore, the worst-case time complexity is O(M). Whereas, the time complexity is O(N) where N is the number of call in the records in the input file. 
+
+
+Task3: both the worst case and time complexity are O(N) because the time complexity is dominated by the step with the highest complexity which is O(N).
+
+
+Task4: also, both the worst case and time complexity here are O(N) because the time complexity is dominated by the step with the highest complexity which is O(N).

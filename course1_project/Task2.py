@@ -37,4 +37,6 @@ def logest_call(calls):
     
     res = f"{logest_call[0]} spent the longest time, {logest_call[3]} seconds, on the phone during September 2016."
 
-    return res
+    return print(res)
+
+logest_call(calls)

@@ -64,9 +64,6 @@ def tel_marketing(calls):
     
     tel_marketing_list = sorted(list(dict.fromkeys(tel_marketing_list)))
 
-    return tel_marketing_list
-
-def listing_telemarketing(tel_marketing_list):
     heading = "These numbers could be telemarketers:\n"
     if len(tel_marketing_list) > 0:
         for i in range(0, len(tel_marketing_list)-1):
@@ -75,3 +72,5 @@ def listing_telemarketing(tel_marketing_list):
         heading += tel_marketing_list[-1]
     
     return print(heading)
+
+tel_marketing(calls)

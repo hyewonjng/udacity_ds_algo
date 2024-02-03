@@ -120,3 +120,7 @@ def rate_of_both_bangalore(calls):
     
 
     return print(f"{rate} percent of calls from fixed lines in Bangalore are calls to other fixed lines in Bangalore.")
+
+
+call_from_bangalore(calls)
+rate_of_both_bangalore(calls)

@@ -38,7 +38,7 @@ def take_digit_from_calls(calls, texts):
 
     unique_numbers = set(phone_numbers)
 
-    return len(list(unique_numbers))
+    return print(f"There are {len(list(unique_numbers))} different telephone numbers in the records.")
 
 
 take_digit_from_calls(calls, texts)
